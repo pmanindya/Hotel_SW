@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$config['base_url'] = $_SERVER['REMOTE_ADDR'] == '::1' ? "http://localhost/Hotel_SW/" : "http://hotel01.iottraining.in/";
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +35,7 @@ $config['base_url'] = '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['encryption_key'] = 'very_strong_key';
 
 /*
 |--------------------------------------------------------------------------

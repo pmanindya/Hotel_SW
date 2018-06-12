@@ -76,9 +76,9 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
+	'username' => $_SERVER['REMOTE_ADDR'] == '::1' ? "root" : "hoteluser01",
+	'password' => $_SERVER['REMOTE_ADDR'] == '::1' ? "" : "hoteluser01",
+	'database' => $_SERVER['REMOTE_ADDR'] == '::1' ? "hotel01" : "hotel01",
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
